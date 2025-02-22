@@ -1,6 +1,8 @@
 const productsCont = document.querySelector(".productsCont");
 const loader = document.querySelector(".loader");
-
+const modal = document.querySelector(".modalCont");
+const modalContentWrapper = document.querySelector(".modalContentWrapper");
+const closeModalButton = document.querySelector(".closeModalButton");
 const isLoading = (status) => {
   status === true
     ? (loader.style.display = "block")
@@ -12,7 +14,6 @@ fetch("https://fakestoreapi.com/products")
   .then((response) => response.json())
   .then((result) => {
     isLoading(false);
-    console.log(result);
     result.map((product) => {
       // creating elements
       const productCard = document.createElement("div");
@@ -41,10 +42,28 @@ fetch("https://fakestoreapi.com/products")
       description.innerHTML = product.description;
       button.innerText = "See More";
       price.innerText = product.price + " $";
+      button.id = product.id;
 
+      // adding event listeners to the buttons see more & close modal
+      button.addEventListener("click", (event) => {
+        modal.style.display = "flex";
+        singleObjectFetcher(event.target.id);
+      });
+      closeModalButton.addEventListener(
+        "click",
+        () => (modal.style.display = "none")
+      );
 
       productsCont.append(productCard);
       productCard.append(imgCont, infoCont);
       infoCont.append(title, description, price, button);
     });
   });
+
+const singleObjectFetcher = (id) => {
+  fetch(`https://fakestoreapi.com/products/${id}`)
+    .then((response) => response.json())
+    .then((product) => {
+      console.log(product);
+    });
+};
