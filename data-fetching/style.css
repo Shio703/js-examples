@@ -129,7 +129,7 @@ body {
 .modalContentWrapper {
   background: white;
   width: 70%;
-  height: 60%;
+  min-height: 60%;
   padding: 1em;
   display: flex;
   border-radius: 3px;
