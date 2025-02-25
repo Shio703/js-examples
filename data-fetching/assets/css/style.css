@@ -157,3 +157,34 @@ body {
     padding: 3px;
   }
 }
+
+/* profile page styles */
+@font-face {
+  font-family: Monsterrat ;
+  src: url();
+}
+.profileCont {
+  justify-self: center;
+  width: 69vw;
+  max-width: 69vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2em;
+  gap: 20px;
+}
+
+.profileImageCont {
+  margin: 0 auto;
+  border-radius: 7px;
+}
+.profileInfoCont {
+  margin: 0 auto;
+}
+
+.userInfoCont {
+  display: flex;
+  align-items: center;
+  gap: 1.3em;
+  margin-top: 7px;
+}
