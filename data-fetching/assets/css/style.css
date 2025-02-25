@@ -1,7 +1,12 @@
+@font-face {
+  font-family: Monsterrat;
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: monsterrat;
 }
 html,
 body {
@@ -159,10 +164,7 @@ body {
 }
 
 /* profile page styles */
-@font-face {
-  font-family: Monsterrat ;
-  src: url();
-}
+
 .profileCont {
   justify-self: center;
   width: 69vw;
@@ -177,6 +179,7 @@ body {
 .profileImageCont {
   margin: 0 auto;
   border-radius: 7px;
+  max-width: 128px;
 }
 .profileInfoCont {
   margin: 0 auto;

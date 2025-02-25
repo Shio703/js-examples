@@ -24,27 +24,27 @@ fetch("https://dummyjson.com/users/1")
     profileInfoCont.innerHTML = `<h3 class="profileTitle">User Information:</h3>
           <div class="userInfoCont">
             <h4>Firstname:</h4>
-            <p>Feria</p>
+            <p>${result.firstName}</p>
           </div>
           <div class="userInfoCont">
             <h4>Lastname:</h4>
-            <p>Amazing creature</p>
+            <p>${result.lastName}</p>
           </div>
           <div class="userInfoCont">
             <h4>Age:</h4>
-            <p>18</p>
+            <p>${result.age}</p>
           </div>
           <div class="userInfoCont">
             <h4>Birthday:</h4>
-            <p>7.03.2006</p>
+            <p>${result.birthDate}</p>
           </div>
           <div class="userInfoCont">
             <h4>Gender:</h4>
-            <p>Female</p>
+            <p>${result.gender}</p>
           </div>
           <div class="userInfoCont">
             <h4>E-mail:</h4>
-            <p>amazingCreature@gmail.com</p>
+            <p>${result.email}</p>
           </div>
         </div>`;
     profileCont.append(profileImageCont, profileInfoCont);
