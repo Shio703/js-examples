@@ -1,0 +1,12 @@
+{
+  "name": "jsnadprep",
+  "version": "0.0.1",
+  "description": "this is my additional preparation for jsnad examination",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shio703",
+  "license": "ISC"
+}
