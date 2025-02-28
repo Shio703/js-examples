@@ -1,6 +1,5 @@
 const fs = require("fs");
 const { exec } = require("node:child_process");
-const http = require("node:http");
 // reading files asyncronously
 
 fs.readFile("./input.txt", { encoding: "utf-8" }, (err, data) => {
@@ -11,21 +10,10 @@ fs.readFile("./input.txt", { encoding: "utf-8" }, (err, data) => {
   console.log("data:", data);
 });
 
-// creating a server
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "content-type": "text/plain" });
-  res.end("hello");
-});
-
-// console.log(process.cpuUsage());
-
-const port = 3000;
-server.listen(port, () => {
-  console.log(`server is running on: ${port}`);
-});
 debugger;
 const testVar = "oo sheesh it works:)";
 
+// child processes:
 const childProcess = require("node:child_process");
 
 const ls = childProcess.spawn("dir", ["/s"], {
@@ -44,7 +32,7 @@ ls.on("error", (error) => {
   process.exit(1);
 });
 
-// child processes exe()
+// child processes exec()
 const execLs = exec("dir /s");
 
 execLs.stdout.on("data", (data) => {
@@ -82,3 +70,34 @@ const execFunc = exec("dir", (error, stdout, stderr) => {
     console.log("data trough stdout: ", stdout, "\n", "exited with code: 0 ");
   }
 });
+
+// execSync example:
+// syncronous code will be executed firstly and then asyncronous!!!
+//  also this method returns buffer by default!
+try {
+  const execSyncLs = childProcess.execSync("dir /s");
+  console.log("execSync data: ", execSyncLs.toString());
+} catch (error) {
+  console.log("error in execSync: ", error, "\n", process.exitCode);
+}
+
+// spawnSync example:
+// DIFFERENCE BETWEEN ERROR && STDERR:
+// error comes from node js runtime itself
+//  for eg. if command is typed wrong and node js will trow an error with reason:
+//  command not found!
+const spawnSync = childProcess.spawnSync("dir", ["/s"], {
+  shell: true,
+  encoding: "utf8",
+});
+if (spawnSync.error) {
+  console.error("error: ", spawnSync.error);
+  process.exit(1);
+} else if (spawnSync.stderr) {
+  console.log(
+    "error trough stderr during execution of the command: ",
+    spawnSync.stderr
+  );
+}
+
+console.log("spawnSync data:", spawnSync.stdout);
