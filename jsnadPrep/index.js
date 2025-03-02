@@ -101,3 +101,19 @@ if (spawnSync.error) {
 }
 
 console.log("spawnSync data:", spawnSync.stdout);
+
+// process has stdin, stdout and stderr streams
+//  that we can use to read process input data and manipulate it
+// process.stdin
+// to pass some data to the process stream we should use following command:
+// "my test data" | node index.js
+
+const readable = process.stdin;
+readable.on("readable", () => {
+  let chunk;
+  let totalData;
+  while (null !== (chunk = readable.read())) {
+    totalData += chunk;
+  }
+  console.log(totalData);
+});

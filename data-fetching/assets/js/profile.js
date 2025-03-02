@@ -6,10 +6,11 @@ const isLoading = (status) => {
     : (loader.style.display = "none");
 };
 isLoading(true);
-
+console.time("content fetched in");
 fetch("https://dummyjson.com/users/1")
   .then((response) => response.json())
   .then((result) => {
+    console.timeEnd("content fetched in");
     isLoading(false);
     console.log(result);
     const image = document.createElement("img");
