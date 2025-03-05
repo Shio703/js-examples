@@ -1,0 +1,185 @@
+[
+  {
+    "date": "3/03/2023",
+    "data": { "time": "17:57", "status": "active 1 hour ago" }
+  },
+  { "date": "4/03/2023", "data": { "time": "20:20", "status": "active" } },
+  { "date": "4/03/2023", "data": { "time": "20:28", "status": "5 min ago" } },
+  { "date": "6/03/2023", "data": { "time": "16:42", "status": "active" } },
+  { "date": "6/03/2023", "data": { "time": "16:44", "status": "active off" } },
+  { "date": "7/03/2023", "data": { "time": "11:56", "status": "6 min ago" } },
+  { "date": "7/03/2023", "data": { "time": "12:09", "status": "active off" } },
+  { "date": "11/03/2023", "data": { "time": "17:21", "status": "active" } },
+  { "date": "11/03/2023", "data": { "time": "19:43", "status": "active" } },
+  { "date": "11/03/2023", "data": { "time": "00:54", "status": "active off" } },
+  { "date": "12/03/2023", "data": { "time": "13:12", "status": "14 min ago" } },
+  {
+    "date": "12/03/2023",
+    "data": { "time": "13:22", "status": "active but off" }
+  },
+  {
+    "date": "12/03/2023",
+    "data": { "time": "Result:", "status": "active together offed" }
+  },
+  { "date": "12/03/2023", "data": { "time": "20:48", "status": "2 hour ago" } },
+  { "date": "12/03/2023", "data": { "time": "21:16", "status": "active" } },
+  { "date": "13/03/2023", "data": { "time": "00:28", "status": "3 hour ago" } },
+  {
+    "date": "13/03/2023",
+    "data": { "time": "12:28", "status": "15 hour ago" }
+  },
+  {
+    "date": "13/03/2023",
+    "data": { "time": "17:43", "status": "20  hour ago" }
+  },
+  { "date": "13/03/2023", "data": { "time": "22:34", "status": "1 hour ago" } },
+  { "date": "14/03/2023", "data": { "time": "11:07", "status": "7 min ago" } },
+  { "date": "14/03/2023", "data": { "time": "11:32", "status": "active" } },
+  { "date": "14/03/2023", "data": { "time": "20:53", "status": "active off" } },
+  {
+    "date": "15/03/2023",
+    "data": { "time": "12:46", "status": "active but off" }
+  },
+  {
+    "date": "19/03/2023",
+    "data": { "time": "21:25", "status": "active but off" }
+  },
+  {
+    "date": "20/03/2023",
+    "data": { "time": "14:54", "status": "active but off" }
+  },
+  { "date": "21/03/2023", "data": { "time": "13:07", "status": "active" } },
+  { "date": "21/03/2023", "data": { "time": "13:13", "status": "6 min ago" } },
+  { "date": "21/03/2023", "data": { "time": "13:24", "status": "17 min ago" } },
+  { "date": "21/03/2023", "data": { "time": "13:35", "status": "28 min ago" } },
+  { "date": "21/03/2023", "data": { "time": "14:11", "status": "active off" } },
+  { "date": "21/03/2023", "data": { "time": "22:09", "status": "25 min ago" } },
+  { "date": "21/03/2023", "data": { "time": "22:32", "status": "active off" } },
+  {
+    "date": "22/03/2023",
+    "data": { "time": "08:02", "status": "active but off" }
+  },
+  {
+    "date": "22/03/2023",
+    "data": { "time": "17:23", "status": "active but off" }
+  },
+  {
+    "date": "22/03/2023",
+    "data": { "time": "20:22", "status": "active but off" }
+  },
+  {
+    "date": "22/03/2023",
+    "data": { "time": "23:17", "status": "active but off" }
+  },
+  {
+    "date": "23/03/2023",
+    "data": { "time": "14:44", "status": "active but off" }
+  },
+  {
+    "date": "23/03/2023",
+    "data": { "time": "16:30", "status": "active but off" }
+  },
+  { "date": "24/03/2023", "data": { "time": "20:22", "status": "active on" } },
+  { "date": "24/03/2023", "data": { "time": "20:58", "status": "22 min ago" } },
+  { "date": "24/03/2023", "data": { "time": "21:10", "status": "active" } },
+  { "date": "24/03/2023", "data": { "time": "21:16", "status": "6 min ago" } },
+  { "date": "24/03/2023", "data": { "time": "21:46", "status": "35 min ago" } },
+  { "date": "24/03/2023", "data": { "time": "22:04", "status": "53 min ago" } },
+  { "date": "24/03/2023", "data": { "time": "22:39", "status": "30 min ago" } },
+  { "date": "25/03/2023", "data": { "time": "00:29", "status": "2 hour ago" } },
+  { "date": "25/03/2023", "data": { "time": "01:18", "status": "3 hour ago" } },
+  { "date": "25/03/2023", "data": { "time": "13:09", "status": "23 min ago" } },
+  { "date": "25/03/2023", "data": { "time": "13:25", "status": "38 min ago" } },
+  { "date": "25/03/2023", "data": { "time": "14:33", "status": "5 min ago" } },
+  { "date": "25/03/2023", "data": { "time": "15:54", "status": "active" } },
+  { "date": "25/03/2023", "data": { "time": "15:57", "status": "5 min ago" } },
+  { "date": "25/03/2023", "data": { "time": "16:07", "status": "active" } },
+  { "date": "25/03/2023", "data": { "time": "16:21", "status": "6 min ago" } },
+  { "date": "25/03/2023", "data": { "time": "16:52", "status": "37 min ago" } },
+  { "date": "25/03/2023", "data": { "time": "17:07", "status": "active" } },
+  { "date": "25/03/2023", "data": { "time": "18:02", "status": "6 min ago" } },
+  { "date": "25/03/2023", "data": { "time": "19:37", "status": "1 hour ago" } },
+  { "date": "25/03/2023", "data": { "time": "19:57", "status": "2 hour ago" } },
+  { "date": "25/03/2023", "data": { "time": "22:20", "status": "58 min ago" } },
+  { "date": "25/03/2023", "data": { "time": "22:31", "status": "active" } },
+  { "date": "25/03/2023", "data": { "time": "22:54", "status": "9 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "00:46", "status": "2 hour ago" } },
+  { "date": "26/03/2023", "data": { "time": "2:06", "status": "3 hour ago" } },
+  { "date": "26/03/2023", "data": { "time": "3:10", "status": "4 hour ago" } },
+  { "date": "26/03/2023", "data": { "time": "08:20", "status": "active" } },
+  { "date": "26/03/2023", "data": { "time": "13:14", "status": "25 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "14:15", "status": "19 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "14:31", "status": "active" } },
+  { "date": "26/03/2023", "data": { "time": "14:36", "status": "5 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "16:28", "status": "27 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "17:02", "status": "6 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "17:31", "status": "active" } },
+  { "date": "26/03/2023", "data": { "time": "17:58", "status": "28 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "18:02", "status": "active" } },
+  { "date": "26/03/2023", "data": { "time": "18:10", "status": "5 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "20:11", "status": "active" } },
+  { "date": "26/03/2023", "data": { "time": "20:41", "status": "20 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "20:45", "status": "active" } },
+  { "date": "26/03/2023", "data": { "time": "21:10", "status": "active" } },
+  { "date": "26/03/2023", "data": { "time": "21:35", "status": "23 min ago" } },
+  { "date": "26/03/2023", "data": { "time": "22:32", "status": "active" } },
+  { "date": "26/03/2023", "data": { "time": "23:15", "status": "active" } },
+  { "date": "26/03/2023", "data": { "time": "23:17", "status": "active off" } },
+  {
+    "date": "27/03/2023",
+    "data": { "time": "13:36", "status": "active but off" }
+  },
+  {
+    "date": "27/03/2023",
+    "data": { "time": "13:53", "status": "active but off" }
+  },
+  {
+    "date": "27/03/2023",
+    "data": { "time": "18:02", "status": "active but off" }
+  },
+  {
+    "date": "27/03/2023",
+    "data": { "time": "19:45", "status": "active but off" }
+  },
+  {
+    "date": "27/03/2023",
+    "data": { "time": "20:12", "status": "active but off" }
+  },
+  { "date": "27/03/2023", "data": { "time": "20:22", "status": "active on" } },
+  { "date": "27/03/2023", "data": { "time": "20:24", "status": "active off" } },
+  { "date": "28/03/2023", "data": { "time": "00:20", "status": "active on" } },
+  { "date": "28/03/2023", "data": { "time": "00:34", "status": "active" } },
+  { "date": "28/03/2023", "data": { "time": "00:39", "status": "6 min ago" } },
+  {
+    "date": "28/03/2023",
+    "data": { "time": "15:58", "status": "active but off" }
+  },
+  {
+    "date": "28/03/2023",
+    "data": { "time": "20:17", "status": "active but off" }
+  },
+  {
+    "date": "28/03/2023",
+    "data": { "time": "22:04", "status": "active but off" }
+  },
+  {
+    "date": "29/03/2023",
+    "data": { "time": "20:54", "status": "active but off" }
+  },
+  {
+    "date": "29/03/2023",
+    "data": { "time": "21:40", "status": "active but off" }
+  },
+  {
+    "date": "30/03/2023",
+    "data": { "time": "17:21", "status": "active but off" }
+  },
+  {
+    "date": "30/03/2023",
+    "data": { "time": "20:47", "status": "active but off" }
+  },
+  {
+    "date": "31/03/2023",
+    "data": { "time": "13:44", "status": "active but off" }
+  }
+]
