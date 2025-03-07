@@ -8,7 +8,7 @@
 
 | Methods: | Purpose:                   | Endpoints:                                                |
 | -------- | -------------------------- | --------------------------------------------------------- |
-| `GET`    | Main                       | https://simple-api703.onrender.com`                       |
+| `GET`    | Main                       | https://simple-api703.onrender.com                       |
 | `GET`    | Lists files                | https://simple-api703.onrender.com/list                   |
 | `GET`    | Fetches exact file content | https://simple-api703.onrender.com/file?name=03-2023.json |
 
