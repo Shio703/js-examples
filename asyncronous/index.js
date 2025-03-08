@@ -41,3 +41,66 @@ myFunc(() => {
     });
   });
 });
+
+// asyncronous testing:
+
+// using promises directly:
+const asyncFunc = (username) => {
+  return new Promise((resolve, reject) => {
+    if (!username) {
+      setTimeout(() => {
+        reject("Username is not provided!");
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        console.log(`username ${username} recieved`);
+        resolve();
+      }, 2500);
+    }
+  });
+};
+
+const { test } = require("node:test");
+const assert = require("assert");
+
+test("async test", () => assert.doesNotReject(() => asyncFunc("feria703")));
+test("async test (which fails)", () => assert.doesNotReject(() => asyncFunc()));
+
+// using async/await:
+// but this approach is still not a truly asyncronous
+// bicouse in this function operations are syncronous.
+// with real async operations like setTimeout best approach is to use promises!
+// but this function still returns a promise which in this case instantly rejects
+// like so Promise.reject()
+const asyncFunc2 = async (username) => {
+  if (!username) {
+    throw new Error("Username is not provided!");
+  } else {
+    console.log(`username ${username} recieved`);
+  }
+};
+
+test("testing with async/await", async () => {
+  await assert.rejects(async () => {
+    await asyncFunc2("feria");
+  });
+});
+
+// Do not forget that microtasks( Promises ) has priority over macrotasks( setTimeout ) in the event loop.
+// and firstly syncronous code executes in any case! so that means that it has priority over the abovementioned.
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Macrotask: setTimeout");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("Microtask: Promise");
+});
+
+console.log("End");
+// Output:
+// Start
+// End
+// Microtask: Promise
+// Macrotask: setTimeout
