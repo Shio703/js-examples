@@ -346,3 +346,9 @@ const totalWorth = sales.reduce((total, value, index, array) => {
 }, 0);
 
 console.log("total worth of products:", totalWorth);
+
+// for of loop:
+const testArr = ["a", "b", "c"];
+for (const item of testArr) {
+  console.log(item);
+}
