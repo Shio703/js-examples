@@ -5,8 +5,8 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 :root {
   --primaryColor: white;
@@ -32,16 +32,32 @@ body {
 }
 .mainCont {
   width: inherit;
-  height: inherit;
+  height: 100%;
   padding-top: 7vh;
   background-color: var(--bgColor);
 }
-
-.dataCont {
+.dataDiv {
   background-color: var(--bgColor2);
   margin: 0 auto;
   width: 75%;
   height: 100%;
+}
+.dataCont {
+  background-color: var(--bgColor2);
+  margin: 0 auto 7px;
+  width: 59%;
+
+  & > .wrapper {
+    display: flex;
+    text-align: center;
+    padding-top: 7px;
+    & > .time {
+      flex: 1;
+    }
+    & > .status {
+      flex: 1;
+    }
+  }
 }
 
 .date {
