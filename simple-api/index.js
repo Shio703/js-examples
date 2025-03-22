@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
   //   console.log(req.url);
 
   if (req.url === "/") {
-    res.writeHead(200,  { "content-type": "application/json" } );
+    res.writeHead(200, { "content-type": "application/json" });
     res.end(
       JSON.stringify({
         message: " Welcome to my Simple api page:) ",
@@ -30,8 +30,10 @@ const server = http.createServer((req, res) => {
           JSON.stringify({ message: "error occured (stderr feed)", stderr })
         );
       } else {
-        res.writeHead(200, { "content-type": "text/plain" });
-        res.end(stdout);
+        res.writeHead(200, { "content-type": "application/json" });
+        const toArray = stdout.split("\n");
+        toArray.pop();
+        res.end(JSON.stringify(toArray));
       }
     });
   } else if (req.url.startsWith("/file")) {
