@@ -61,11 +61,11 @@ const server = http.createServer((req, res) => {
       });
       res.end(fileContent);
     } catch (error) {
-      res.writeHead(500, {
-        "content-type": "application/json",
-        "access-control-allow-origin": "http://127.0.0.1:5500",
-      });
       if (error.code === "ENOENT") {
+        res.writeHead(404, {
+          "content-type": "application/json",
+          "access-control-allow-origin": "http://127.0.0.1:5500",
+        });
         res.end(
           JSON.stringify({
             message: "Requested file doesn't exists!",
@@ -73,6 +73,10 @@ const server = http.createServer((req, res) => {
           })
         );
       } else {
+        res.writeHead(500, {
+          "content-type": "application/json",
+          "access-control-allow-origin": "http://127.0.0.1:5500",
+        });
         res.end(JSON.stringify({ message: "error occured", error }));
       }
     }
