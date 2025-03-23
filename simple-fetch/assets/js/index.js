@@ -1,10 +1,18 @@
+// console.log = function (){};
 const datadiv = document.querySelector(".dataDiv");
+const loader = document.querySelector(".loader");
+
+const isLoading = (status = true) => {
+  !status ? (loader.style.display = "none") : "";
+};
 
 async function getData(dataPath = "/") {
   try {
-    const response = await fetch(`http://localhost:3000${dataPath}`);
-    
+    const response = await fetch(
+      `https://simple-api703.onrender.com${dataPath}`
+    );
     const data = await response.json();
+    isLoading(false);
     // console.log(data);
     return data;
   } catch (error) {
