@@ -37,6 +37,7 @@ fetch("https://fakestoreapi.com/products")
 
       // filling with the data
       img.src = product.image;
+      img.alt = product.title;
       imgCont.append(img);
       title.innerText = product.title;
       description.innerHTML = product.description;
