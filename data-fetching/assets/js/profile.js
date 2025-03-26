@@ -1,11 +1,13 @@
 const profileCont = document.querySelector(".profileCont");
 const loader = document.querySelector(".loader");
-const isLoading = (status) => {
+
+const isLoading = (status = true) => {
   status === true
     ? (loader.style.display = "block")
     : (loader.style.display = "none");
 };
-isLoading(true);
+isLoading();
+
 console.time("content fetched in");
 fetch("https://dummyjson.com/users/1")
   .then((response) => response.json())

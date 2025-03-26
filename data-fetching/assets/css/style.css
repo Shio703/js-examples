@@ -55,7 +55,6 @@ body {
   }
 }
 .loader {
-  display: none;
   align-self: center;
   width: 2em;
   height: 2em;

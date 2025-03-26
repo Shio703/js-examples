@@ -3,12 +3,13 @@ const loader = document.querySelector(".loader");
 const modal = document.querySelector(".modalCont");
 const modalContentWrapper = document.querySelector(".modalContentWrapper");
 const closeModalButton = document.querySelector(".closeModalButton");
-const isLoading = (status) => {
+
+const isLoading = (status = true) => {
   status === true
     ? (loader.style.display = "block")
     : (loader.style.display = "none");
 };
-isLoading(true);
+isLoading();
 
 fetch("https://fakestoreapi.com/products")
   .then((response) => response.json())
