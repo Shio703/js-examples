@@ -3,13 +3,16 @@ const { readFileSync } = require("node:fs");
 const url = require("url");
 const http = require("node:http");
 
+
+const allowedOrigins = ["http://127.0.0.1:5500", "http://localhost:3000"];
+
 const server = http.createServer((req, res) => {
   //   console.log(req.url);
 
   if (req.url === "/") {
     res.writeHead(200, {
       "content-type": "application/json",
-      "access-control-allow-origin": "http://127.0.0.1:5500",
+      "access-control-allow-origin": allowedOrigins,
     });
     res.end(
       JSON.stringify({
@@ -25,7 +28,7 @@ const server = http.createServer((req, res) => {
       if (error) {
         res.writeHead(500, {
           "content-type": "application/json",
-          "access-control-allow-origin": "http://127.0.0.1:5500",
+          "access-control-allow-origin": allowedOrigins,
         });
         res.end(
           JSON.stringify({ message: "error occured (error feed)", error })
@@ -33,7 +36,7 @@ const server = http.createServer((req, res) => {
       } else if (stderr) {
         res.writeHead(500, {
           "content-type": "application/json",
-          "access-control-allow-origin": "http://127.0.0.1:5500",
+          "access-control-allow-origin": allowedOrigins,
         });
         res.end(
           JSON.stringify({ message: "error occured (stderr feed)", stderr })
@@ -41,7 +44,7 @@ const server = http.createServer((req, res) => {
       } else {
         res.writeHead(200, {
           "content-type": "application/json",
-          "access-control-allow-origin": "http://127.0.0.1:5500",
+          "access-control-allow-origin": allowedOrigins,
         });
         const toArray = stdout.split("\n");
         toArray.pop();
@@ -57,14 +60,14 @@ const server = http.createServer((req, res) => {
 
       res.writeHead(200, {
         "content-type": "application/json",
-        "access-control-allow-origin": "http://127.0.0.1:5500",
+        "access-control-allow-origin": allowedOrigins,
       });
       res.end(fileContent);
     } catch (error) {
       if (error.code === "ENOENT") {
         res.writeHead(404, {
           "content-type": "application/json",
-          "access-control-allow-origin": "http://127.0.0.1:5500",
+          "access-control-allow-origin": allowedOrigins,
         });
         res.end(
           JSON.stringify({
@@ -75,7 +78,7 @@ const server = http.createServer((req, res) => {
       } else {
         res.writeHead(500, {
           "content-type": "application/json",
-          "access-control-allow-origin": "http://127.0.0.1:5500",
+          "access-control-allow-origin": allowedOrigins,
         });
         res.end(JSON.stringify({ message: "error occured", error }));
       }
@@ -83,7 +86,7 @@ const server = http.createServer((req, res) => {
   } else {
     res.writeHead(404, {
       "content-type": "text/plain",
-      "access-control-allow-origin": "http://127.0.0.1:5500",
+      "access-control-allow-origin": allowedOrigins,
     });
     res.end("Resource not found 404:(");
   }
