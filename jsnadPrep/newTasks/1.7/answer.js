@@ -7,6 +7,9 @@ async function processFile(filePath, outputFilePath) {
   }
 
   // Implement missing logic
+  const fileContent = await fs.readFile(filePath, { encoding: "utf-8" });
+  const toUpper = fileContent.toUpperCase();
+  await fs.writeFile(outputFilePath, toUpper, { encoding: "utf-8" });
 }
 
 // Example call
