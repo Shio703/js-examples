@@ -9,6 +9,11 @@ async function setupEmitter(eventName, delay) {
   const emitter = new EventEmitter();
 
   // Implement missing logic
+  emitter.on(eventName, () => console.log("Event recieved"));
+
+  setTimeout(() => {
+    emitter.emit(eventName);
+  }, delay);
 }
 
 // Example call
