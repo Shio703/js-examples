@@ -1,5 +1,3 @@
-const fetch = require("node-fetch");
-
 async function fetchUserData(apiUrl) {
   // Existing code: Do not modify
   if (!apiUrl) {
@@ -7,6 +5,14 @@ async function fetchUserData(apiUrl) {
   }
 
   // Implement missing logic
+  try {
+    const resData = await fetch(apiUrl);
+    const jsonifiedData = await resData.json();
+
+    return jsonifiedData.map((user, index, array) => user.username);
+  } catch (error) {
+    throw error;
+  }
 }
 
 // Example call
