@@ -1,5 +1,3 @@
-const fetch = require("node-fetch");
-
 async function fetchMultipleURLs(urls) {
   // Existing code: Do not modify
   if (!Array.isArray(urls) || urls.length === 0) {
@@ -7,6 +5,13 @@ async function fetchMultipleURLs(urls) {
   }
 
   // Implement missing logic
+  return Promise.all(
+    urls.map(async (url) => {
+      const response = await fetch(url);
+      const parsed = await response.json();
+      return parsed.body.length;
+    })
+  );
 }
 
 // Example call
