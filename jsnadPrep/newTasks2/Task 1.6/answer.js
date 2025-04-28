@@ -4,6 +4,7 @@ function logMessageAfterDelay(message, delay) {
   }
 
   // Implement delay logic
+  return setTimeout(() => console.log(message), delay);
 }
 
 // Example
