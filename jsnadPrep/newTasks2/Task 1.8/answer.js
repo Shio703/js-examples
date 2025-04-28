@@ -6,6 +6,7 @@ function compressText(input, callback) {
   }
 
   // Implement gzip compression
+  zlib.gzip(input, callback);
 }
 
 // Example
