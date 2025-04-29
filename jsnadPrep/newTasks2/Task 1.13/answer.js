@@ -2,6 +2,14 @@ const EventEmitter = require("events");
 
 class Notifier extends EventEmitter {
   // Implement the class
+  constructor(msg) {
+    super();
+    this.msg = msg;
+  }
+
+  notify(msg) {
+    this.emit("notify", msg);
+  }
 }
 
 // Example
