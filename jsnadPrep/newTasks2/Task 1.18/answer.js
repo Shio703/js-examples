@@ -6,6 +6,17 @@ async function appendJsonToFile(filePath, data) {
   }
 
   // Read, update, write JSON array
+  try {
+    let arr = [];
+    const fileContent = await fs.readFile(filePath);
+    arr = JSON.parse(fileContent);
+
+    arr.push(data);
+    await fs.writeFile("modified.json", JSON.stringify(arr));
+    
+  } catch (error) {
+    throw error;
+  }
 }
 
 // Example
