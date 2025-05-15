@@ -2,13 +2,16 @@ const { exec } = require("node:child_process");
 const { readFileSync } = require("node:fs");
 const url = require("url");
 const http = require("node:http");
+require("dotenv").config();
 
 const allowedOrigins = ["http://127.0.0.1:5500", "http://localhost:3000"];
 
 const server = http.createServer((req, res) => {
-  //   console.log(req.url);
-    
-    res.setHeader("Access-Control-Allow-Origin", "*");
+  if (process.env.NODE_ENV === "development") {
+    console.log(req.method, req.url, res.statusCode);
+  }
+
+  res.setHeader("Access-Control-Allow-Origin", "*");
 
   if (req.url === "/") {
     res.writeHead(200, {
