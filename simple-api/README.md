@@ -1,7 +1,7 @@
 ## Simple api
 
 <h3>Dependencies:</h3>
-<h4>devDependencies: dotenv</h4>
+<h4>dotenv.</h4>
 <h3>devDependencies:</h3>
 <h4>nodemon, cross-env.</h4>
 
