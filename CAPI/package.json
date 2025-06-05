@@ -1,0 +1,25 @@
+{
+  "name": "capi",
+  "version": "1.0.0",
+  "description": "Static API to get certificates on my Resume.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "Express.js",
+    "Backend"
+  ],
+  "author": "Shio703 (Shio Zhamurashvili)",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
