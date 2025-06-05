@@ -1,7 +1,7 @@
 const express = require("express");
 const { exec } = require("node:child_process");
 const fs = require("node:fs").promises;
-
+require("dotenv").config;
 const port = process.env.PORT || 7030;
 const os = process.env.os;
 const app = express();
