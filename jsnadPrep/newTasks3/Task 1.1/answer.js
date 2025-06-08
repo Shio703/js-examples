@@ -6,9 +6,10 @@ function mergeBuffers(buffer1, buffer2) {
   }
 
   // Your code here
+  return Buffer.concat([buffer1, buffer2]);
 }
 
 const buff1 = Buffer.alloc(7, "f");
 const buff2 = Buffer.alloc(7, "e");
 
-mergeBuffers(buff1, buff2);
+console.log(mergeBuffers(buff1, buff2));

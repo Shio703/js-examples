@@ -6,6 +6,22 @@ function fetchJsonFromUrl(url, callback) {
   }
 
   // Your code here
+  http.get(url, (res) => {
+    let response = "";
+
+    res.on("data", (chunk) => {
+      response += chunk;
+    });
+    res.on("end", () => {
+      try {
+        const parsedData = JSON.parse(response);
+
+        callback(parsedData);
+      } catch (error) {
+        throw error;
+      }
+    });
+  });
 }
 
-fetchJsonFromUrl("example.com", console.log);
+fetchJsonFromUrl("http://jsonplaceholder.typicode.com/posts/1", console.log);

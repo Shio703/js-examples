@@ -4,6 +4,11 @@ function delayedLoop(items, delayMs, callback) {
   }
 
   // Your code here
+  items.forEach((item, index) => {
+    setTimeout(() => {
+      callback(item);
+    }, delayMs * index);
+  });
 }
 
-delayedLoop(["test", "test", "test"], 703, console.log);
+delayedLoop(["test", "test", "test"], 2000, console.log);
