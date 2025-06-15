@@ -7,13 +7,15 @@ require("dotenv").config();
 const allowedOrigins = ["http://127.0.0.1:5500", "http://localhost:3000"];
 
 const server = http.createServer((req, res) => {
+  const urlPath = req.url;
+
   if (process.env.NODE_ENV === "development") {
-    console.log(req.method, req.url, res.statusCode);
+    console.log(req.method, urlPath, res.statusCode);
   }
 
   res.setHeader("Access-Control-Allow-Origin", "*");
 
-  if (req.url === "/") {
+  if (urlPath === "/") {
     res.writeHead(200, {
       "content-type": "application/json",
     });
@@ -26,7 +28,7 @@ const server = http.createServer((req, res) => {
         },
       })
     );
-  } else if (req.url === "/list") {
+  } else if (urlPath === "/list") {
     exec(`ls ./json`, (error, stdout, stderr) => {
       if (error) {
         res.writeHead(500, {
@@ -51,9 +53,9 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify(toArray));
       }
     });
-  } else if (req.url.startsWith("/file")) {
+  } else if (urlPath.startsWith("/file")) {
     try {
-      const parsedUrl = url.parse(req.url, true);
+      const parsedUrl = url.parse(urlPath, true);
       const queryParams = parsedUrl.query;
 
       const fileContent = readFileSync(`./json/${queryParams.name}`);
