@@ -23,3 +23,13 @@ priceInEur(300);
 // for instance map method recieves an anonymus function as a callback (parameter).
 
 [].map(() => {});
+
+// example tree: which is the same as first one.
+
+function handleClick(size = Number(16)) {
+  return () => {
+    document.body.style.fontSize = `${size}px`;
+  };
+}
+
+handleClick(32);
