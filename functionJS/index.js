@@ -8,8 +8,8 @@
 function myFunc(currencyUnit) {
   return (price = Number()) => {
     if (!price) return console.log("You must provide price as well!");
-    if (currencyUnit === "$") console.log(`Price in USD is: ${price}`);
-    if (currencyUnit === "€") console.log(`Price in EUR is: ${price}`);
+    if (currencyUnit === String("$")) console.log(`Price in USD is: ${price}`);
+    if (currencyUnit === String("€")) console.log(`Price in EUR is: ${price}`);
   };
 }
 
