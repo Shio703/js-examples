@@ -5,11 +5,11 @@
 
 // one and potentially useful example (in my view):
 
-function myFunc(currencyUnit) {
+function myFunc(currencyUnit = String("$")) {
   return (price = Number()) => {
     if (!price) return console.log("You must provide price as well!");
-    if (currencyUnit === String("$")) console.log(`Price in USD is: ${price}`);
-    if (currencyUnit === String("€")) console.log(`Price in EUR is: ${price}`);
+    if (currencyUnit === "$") console.log(`Price in USD is: ${price}`);
+    if (currencyUnit === "€") console.log(`Price in EUR is: ${price}`);
   };
 }
 
