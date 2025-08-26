@@ -33,3 +33,18 @@ function handleClick(size = Number(16)) {
 }
 
 handleClick(32);
+
+// Known Closure Example:
+
+const clossureFunc = () => {
+  const closureVar = 'I am Variable that is available in the "func"';
+
+  return function func() {
+    return closureVar;
+  };
+};
+
+// here is a return value that is a function,
+//  which stores "closureVar" temporarly.
+const returnValue = clossureFunc();
+console.log(returnValue());
