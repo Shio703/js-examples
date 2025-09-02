@@ -104,3 +104,24 @@ console.log("End");
 // End
 // Microtask: Promise
 // Macrotask: setTimeout
+
+// /////////////////////////////////////////////////////////////////
+// Two way to use **await**:
+// you can use await on a top level of !ES Module only!
+import fs from "node:fs";
+// if youu are using this syntax import/from
+// and in package.json should be defined as a type: "module" or
+// add an extension .mjs to use it.
+
+// so due to this line below ( with await ) presents this app will crash with ReferecError:
+//Cannot determine intended module format because both require() and top-level
+// await are present. If the code is intended to be CommonJS, wrap await in an async function.
+//  If the code is intended to be an ES module, replace require() with import.
+try {
+  await new Promise((resovle, reject) => {
+    resovle(console.log("Top level await waits for this promise"));
+  });
+} catch (err) {
+  console.error(err);
+}
+// **on commonjs you cant use top level await it's ES modern js feature.**
