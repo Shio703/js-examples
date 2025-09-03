@@ -2,3 +2,5 @@
 // Problem: Write the command to:
 
 // List all outdated dependencies.
+
+// npm list outdated

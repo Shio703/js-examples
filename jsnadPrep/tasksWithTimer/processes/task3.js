@@ -4,3 +4,10 @@
 
 // Uses child_process.spawn() to run ls (Linux/macOS) or dir (Windows).
 // Logs the output.
+
+const { spawn } = require("child_process");
+
+const ls = spawn("dir", ["."]);
+ls.stderr.on("data", console.error);
+ls.on("error", console.error);
+ls.stdout.on("data", (data) => console.log(data.toString()));

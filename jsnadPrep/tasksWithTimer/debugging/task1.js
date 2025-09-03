@@ -2,5 +2,10 @@
 // Problem: Modify this script to handle errors:
 
 const fs = require("fs");
-const data = fs.readFileSync("config.json", "utf8");
-console.log(data);
+try {
+  const data = fs.readFileSync("config.json", "utf8");
+  console.log(data);
+} catch (error) {
+    console.error(error);
+    
+}

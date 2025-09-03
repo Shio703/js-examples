@@ -1,9 +1,11 @@
 // Task 2: Improve slow code with caching
 // Problem: Optimize this:
+const memo = [];
 
 function getData() {
   console.log("Fetching...");
-  return Math.random();
+  const number = Math.random();
+  number = memo[number];
 }
 console.log(getData());
 console.log(getData()); // Fetches again (not optimized)
