@@ -125,3 +125,31 @@ try {
   console.error(err);
 }
 // **on commonjs you cant use top level await it's ES modern js feature.**
+
+// Promise.all && Promise.allSettled
+// when using Promise.all even if one of the provided promise fails
+// then entire function rejects with error.
+const resultOfAll = Promise.all([
+  Promise.resolve(1),
+  Promise.resolve(2),
+  Promise.reject("Rejected"),
+])
+  .then((result) => console.log(result))
+  .catch((err) => console.log("Error:", err));
+
+console.log("ResultOfAll:", resultOfAll);
+// ResultOfAll: Promise { <pending> }
+
+// Promise.allSettled is better because it won't fail if one of the provided promise fails. at the end
+// it will provide an array with objects of containing result of each promise even the one's which rejected.
+Promise.allSettled([
+  Promise.resolve(1),
+  Promise.resolve(2),
+  Promise.reject("Rejected"),
+])
+  .then((result) => console.log("Result:", result))
+  .catch((err) => console.error(err));
+
+// so as a result if you use Promise.allSettled then you are still benefiting from promises plus your entire
+// operation won't be permitted because one particular task failed.
+// you can use Promise.all if it's very important case and you need all promises fulfilled.
