@@ -3,6 +3,7 @@ const loader = document.querySelector(".loader");
 const modal = document.querySelector(".modalCont");
 const modalContentWrapper = document.querySelector(".modalContentWrapper");
 const closeModalButton = document.querySelector(".closeModalButton");
+const yearPlaceholder = document.getElementById("yearPlaceholder").textContent = new Date().getFullYear();
 
 const isLoading = (status = true) => {
   status === true
